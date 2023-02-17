@@ -1,0 +1,117 @@
+.top-header{
+    padding: 2.6rem 0;
+    .right-menu{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li{
+            margin-right: 4rem;
+            a{
+                font-size: 2rem;
+                color: $gray-dark-color;
+                &:active,
+                &:visited,&:hover{
+                    color: $gray-dark-color;
+                }
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            .dropdown{
+                button{
+                    background-color: transparent;
+                    font-size: 1.8rem;
+                    padding: 0;
+                    color: $gray-dark-color;
+                    border: none;
+                }
+                .dropdown-toggle::after{
+                    position: relative;
+                    top: 1rem;
+                    left: .6rem;
+                    border: 0;
+                    background-image: url('../images/downarrow.svg');
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    // background-attachment:fixed;
+                    background-repeat: no-repeat;
+                    
+                    background-size: contain;
+                }
+                .dropdown-menu{
+                    li{
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+.bottom-header{
+    background-color: $violet-light-color;
+    padding: 3.6rem 0 2.7rem 0;
+    .container{
+        .filter-top{
+            border-bottom: 1px solid rgba(255,255,255,.5);
+            .podcasts-header{
+                color: $white-color;
+                font-size: 7rem;
+                font-family: $secondary-font-medium;
+
+                @include breakpoint(desktop-max) {
+                    @include font-size(4rem);
+                }
+            }
+        }
+        .filter{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            color: $white-color;
+            margin-top: 2.2rem;
+            .filter-heading{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                font-family: $primary-font-semibold;
+                @media(max-width:415px){
+                    width: 100%;
+                }
+            }
+
+            .filter-item{
+
+                &__label{
+                    font-size: 1.8rem;
+                }
+                
+                &__list{
+                    button{
+                        font-size: 1.5rem;
+                        border-radius: 3rem;
+                        padding: .7rem 1.5rem;
+                        border: 1px solid $white-color;
+                        background-color: transparent;
+                        font-family: $primary-font-regular;
+                        color: $white-color;
+                    }
+                }
+                
+                &:not(:last-child){
+                    border-right: 1px solid $white-color;
+                    padding-right: 2rem;
+                    margin-right: 2rem;
+                }
+                @media(max-width:415px){
+                    width: 100%;
+                    margin-top: 1rem;
+                    &:not(:last-child){
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}

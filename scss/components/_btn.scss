@@ -1,0 +1,47 @@
+.modify_btn{
+    border: none;
+    background-color: $white-color;
+    padding: 1.3rem 2.6rem;
+    color: $gray-dust-color;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+.play-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-dark-color;
+    border: 1px solid $gray-dark-color;
+    color: $white-color;
+    font-size: 1.8rem;
+    font-family: $primary-font-semibold;
+    border-radius: 2rem;
+    padding: 7px 0;
+    min-width: 137px;
+    transition: .3s;
+
+    &:hover{
+        background-color: transparent;
+        color: $gray-dark-color;
+        img{
+            filter: brightness(1) invert(1);
+        }
+    }
+
+}
+.btn-outline{
+    background-color: transparent;
+    border: 1px solid $gray-dark-color;
+    color: $gray-dark-color;
+    font-size: 1.8rem;
+    font-family: $primary-font-semibold;
+    border-radius: 2rem;
+    padding: 7px 0;
+    min-width: 137px;
+    transition: .3s;
+
+    &:hover{
+        background-color: $gray-dark-color;
+        color: $white-color;
+    }
+}

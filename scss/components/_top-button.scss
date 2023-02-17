@@ -1,0 +1,19 @@
+#top-button{
+    position: fixed;
+    z-index: 100;
+    right: 3rem;
+    bottom: 6.5rem;
+    background-color: $white-color;
+    border: none;
+    border-radius: 50%;
+    padding: 2.1rem 1.5rem;
+    box-shadow: 0 0 .4rem .1rem $light-gray;
+    cursor: pointer;
+    transition: opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+#top-button.show {
+    opacity: 1;
+    visibility: visible;
+}

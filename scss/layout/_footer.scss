@@ -1,0 +1,29 @@
+.top-footer{
+    margin: 9.9rem 0;
+    .header{
+        font-size: 2.8rem;
+        color: $dark-gray;
+        font-family: $primary-font-bold;
+    }
+    .link-section {
+        a{
+            font-size: 2rem;
+            text-decoration: none;
+            color: $dark-gray;
+            &:hover{
+                color: $dark-gray;
+            }
+        }
+    }
+    @include breakpoint(mobile-max){
+        margin: 6rem 0;
+    }
+}
+.bottom-footer{
+    background-color: $medium-gray;
+    padding: 1.2rem 0;
+    p{
+        font-size: 1.6rem;
+        color: $white-color  ;
+    }
+}

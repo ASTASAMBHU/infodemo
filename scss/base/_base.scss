@@ -1,0 +1,33 @@
+html {
+    font-size: 10px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+body {
+    font-size: 1rem;
+    font-family: $primary-font-regular;
+    position: relative;
+    color: $black-color;
+}
+/**
+* Firefox specific rule
+*/
+
+@-moz-document url-prefix() {
+    body {
+        font-weight: lighter !important;
+    }
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

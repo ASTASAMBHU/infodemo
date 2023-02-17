@@ -1,0 +1,31 @@
+$breakpoints: (
+    'custom-small-mobile-max': (max-width: 359px),
+    'small-mobile-max': (max-width: 467px),
+    'portrait-mobile-max': (max-width: 575px),
+    'mobile-max': (max-width: 767px),
+    'ipad-max': (max-width: 991px),
+    'desktop-max': (max-width: 1199px),
+    'max-1024': (max-width: 1024px),
+    'max-1280': (max-width: 1280px),
+    'max-1366': (max-width: 1366px),
+    'max-1440': (max-width: 1440px),
+    'max-1680': (max-width: 1680px),
+    'max-1920': (max-width: 1920px)
+);
+
+@mixin breakpoint($name) {
+    @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Couldn't find a breakpoint named `#{$name}`.";
+    }
+}
+
+
+@mixin font-size($size) {
+    font-size: ($size);
+}
